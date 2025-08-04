@@ -23,16 +23,12 @@ router.get('/create-user', async (req, res) => {
 router.post('/create-post', async (req, res) => {
   const { postText } = req.body;
   let createdPost = await postModel.create({
-    postText, user
   });
-  
+
   let user = await userModel.findOne({ _id: user });
   user.posts.push(createdPost._id);
   await user.save();
-
 });
-
-
 
 express.listen(3000, () => {
   console.log('Server is running on port http://localhost:3000');

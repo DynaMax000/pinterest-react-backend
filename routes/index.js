@@ -1,12 +1,19 @@
 const express = require('express');
 const router = express.Router();
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
+const session = require('express-session');
+
 const userModel = require('../models/User.models.js');
 const postModel = require('../models/Post.models.js');
 
-express.use(express.json());
-express.use(express.urlencoded({ extended: true }));
+const app = express();
 
-express.set('view engine', 'ejs');
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+app.set('view engine', 'ejs');
 
 router.get('/', (req, res) => {
   res.send('Welcome to the home page!');
@@ -30,6 +37,6 @@ router.post('/create-post', async (req, res) => {
   await user.save();
 });
 
-express.listen(3000, () => {
-  console.log('Server is running on port http://localhost:3000');
+app.listen(4000, () => {
+  console.log('Server is running on port http://localhost:4000');
 });

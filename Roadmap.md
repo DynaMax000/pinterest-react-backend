@@ -1,0 +1,5 @@
+- /route -> login and signup
+- /profile -> user profile and saved posts and uploaded section
+- /feed -> feed of posts
+- /click -> image open and can save
+- /board/:boardname -> board

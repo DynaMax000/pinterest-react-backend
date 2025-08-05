@@ -1,8 +1,48 @@
 {
+  "name": "pinterest-react-backend",
+  "version": "1.0.0",
+  "description": "A Node.js backend application for a Pinterest-like platform, built with Express.js and MongoDB",
+  "type": "commonjs",
+  "main": "routes/index.js",
+  "scripts": {
+    "start": "node routes/index.js",
+    "dev": "nodemon routes/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "pinterest",
+    "backend",
+    "nodejs",
+    "express",
+    "mongodb",
+    "mongoose",
+    "api",
+    "social-media"
+  ],
+  "author": "DynaMax000",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DynaMax000/pinterest-react-backend.git"
+  },
+  "bugs": {
+    "url": "https://github.com/DynaMax000/pinterest-react-backend/issues"
+  },
+  "homepage": "https://github.com/DynaMax000/pinterest-react-backend#readme",
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  },
   "dependencies": {
     "ejs": "^3.1.10",
     "express": "^5.1.0",
+    "express-session": "^1.18.2",
     "mongoose": "^8.17.0",
+    "passport": "^0.7.0",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^8.0.0"
+  },
+  "devDependencies": {
     "nodemon": "^3.1.10"
   }
 }
